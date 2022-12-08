@@ -3,6 +3,7 @@ import { GifItem } from "./GifItem";
 // import { getGifs } from "../helpers/getGifs";
 import { useFetchGifs } from "../hooks/useFetchGifs";
 import { DeleteCategory } from "./DeleteCategory";
+import { PropTypes } from "prop-types";
 
 export const GifGrid = ({ category, onDelete }) => {
   // Movido a cutom hook useFetchGifs:
@@ -17,7 +18,7 @@ export const GifGrid = ({ category, onDelete }) => {
   // getGifs(category);
 
   // useEffect es un hook de React que sirve para disparar efectos secundarios (un proceso que se ejecuta cuando algo suceda). useEffect NO puede devolver otra cosa que no sea una funcion. Para el estado de las imagenes (en este caso el getGifs devuelve una promesa) podriamos usar then u otra funcion
-  // Movido a cutom hook useFetchGifs:
+  // Movido a custom hook useFetchGifs:
   // useEffect( () => {
   //   getImages();
   // }, []);
@@ -55,4 +56,9 @@ export const GifGrid = ({ category, onDelete }) => {
       </div>
     </>
   )
+}
+
+GifGrid.propTypes = {
+  category: PropTypes.string.isRequired,
+  onDelete: PropTypes.func.isRequired,
 }
