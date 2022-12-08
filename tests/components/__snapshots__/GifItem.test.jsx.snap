@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en GifItem Debe de hacer match con el snapshot y existir el title y url 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="HAPPY DAY!!!"
+      src="https://www.google.com/"
+    />
+    <p>
+      HAPPY DAY!!!
+    </p>
+  </div>
+</div>
+`;
